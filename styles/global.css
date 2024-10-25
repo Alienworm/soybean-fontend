@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 211 27% 28%;
+
+    --card: 0 100% 100%;
+    --card-foreground: 211 27% 28%;
+
+    --popover: 0 100% 100%;
+    --popover-foreground: 211 27% 28%;
+
+    --primary: 153 46% 55%;
+    --primary-foreground: 0 100% 100%;
+
+    --secondary: 190 10% 90%;
+    --secondary-foreground: 211 27% 28%;
+
+    --muted:210 40% 98%;
+    --muted-foreground: 211 27% 28%;
+
+    --accent: 210 40% 98%;
+    --accent-foreground: 211 27% 28%;
+
+    --destructive: 0 88% 68%;
+    --destructive-foreground: 0 100% 100%;
+
+    --text: 211 27% 28%;
+
+    --border: 240 6% 90%;
+
+    --input: 240 6% 90%;
+
+    --ring: 153 46% 55%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 142.1 70.6% 45.3%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142.4 71.8% 29.2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--card);
+  padding: 20px;
+}
+
+::-webkit-scrollbar-track-piece {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1) inset;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 0.25rem;
+}
